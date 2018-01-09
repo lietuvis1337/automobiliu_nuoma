@@ -24,7 +24,6 @@
     android:textColor="@color/colorBlack"
     android:paddingBottom="22dp"/>
 
-
     <EditText
         android:id="@+id/login_username"
         android:hint="@string/login_username"
@@ -48,6 +47,5 @@
         android:background="@color/colorBlack"
         android:textColor="@color/colorWhite"
         android:layout_gravity="center" />
-
 
 </LinearLayout>

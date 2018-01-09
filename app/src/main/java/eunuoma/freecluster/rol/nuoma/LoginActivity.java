@@ -23,12 +23,15 @@ public class LoginActivity extends AppCompatActivity {
         next_kintamasis.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                // vykdomas kodas kai paspaudziamas mygtukas
+            // vykdomas kodas kai paspaudziamas mygtukas
+                if (Validation.isValid(loginUsername.getText().toString()) && Validation.isValid(loginPassword.getText().toString())) {
+                    Toast.makeText(LoginActivity.this, "Prisijungimo vardas: " + loginUsername.getText().toString() + "\n Slaptažodis: " + loginPassword.getText().toString(), Toast.LENGTH_LONG).show();
 
-                Toast.makeText(LoginActivity.this,"Prisijungimo vardas: " + loginUsername.getText().toString() + "\n Slaptažodis: " + loginPassword.getText().toString(),Toast.LENGTH_LONG).show();
-
-                Intent pereitiKitur = new Intent(LoginActivity.this, SearchActivity.class);
-                startActivity(pereitiKitur);
+                    Intent pereitiKitur = new Intent(LoginActivity.this, SearchActivity.class);
+                    startActivity(pereitiKitur);
+                } else {
+                    Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_error), Toast.LENGTH_SHORT).show();
+                }
             }
 
         });
