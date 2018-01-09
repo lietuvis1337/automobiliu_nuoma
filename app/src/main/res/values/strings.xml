@@ -3,8 +3,16 @@
 
     <string name="login_username">Prisijungimo vardas</string>
     <string name="login_password">Slaptažodis</string>
-    <string name="login_submit">Prisijungti</string>
+    <string name="login_login">Prisijungti</string>
+    <string name="login_register">Registruotis</string>
     <string name="login_error">Blogai įvestas prisijungimo vardas arba slaptažodis</string>
+    <string name="register_notice">Norėdami užsiregistruoti mūsų sistemoje, užpildykite žemiau pateiktus langelius ir spauskite „Registruotis“.</string>
+    <string name="register_email">El. paštas</string>
+    <string name="register_submit">Registruotis</string>
+    <string name="register_successful">Jūs sėkmingai užsiregistravote, dabar galite prisijungti.</string>
+    <string name="register_username_error">Blogai įvestas prisijungimo vardas!</string>
+    <string name="register_email_error">Blogai įvestas el. pašto adresas!</string>
+    <string name="register_password_error">Blogai įvestas slaptažodis!</string>
     <string name="search_name">Nuomos istorija</string>
     <string name="search_submit">Ieškoti</string>
 </resources>

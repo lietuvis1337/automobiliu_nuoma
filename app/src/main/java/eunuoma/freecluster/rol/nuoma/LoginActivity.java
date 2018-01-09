@@ -15,12 +15,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button next_kintamasis = (Button) findViewById(R.id.login_submit);
+        Button login_kintamasis = (Button) findViewById(R.id.login_submit);
+        Button register_kintamasis = (Button) findViewById(R.id.login_register);
 
         final EditText loginUsername = (EditText) findViewById(R.id.login_username);
         final EditText loginPassword = (EditText) findViewById(R.id.login_password);
 
-        next_kintamasis.setOnClickListener(new View.OnClickListener() {
+        login_kintamasis.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
             // vykdomas kodas kai paspaudziamas mygtukas
@@ -34,6 +35,12 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
 
+        });
+        register_kintamasis.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent pereitiKitur = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(pereitiKitur);
+            }
         });
     }
 }

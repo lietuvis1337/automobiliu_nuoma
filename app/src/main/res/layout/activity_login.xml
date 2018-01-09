@@ -39,13 +39,32 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/login_submit"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login_submit"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:layout_gravity="center" />
+        android:weightSum="100"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/login_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="@string/login_login"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/login_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:background="@color/colorBlack"
+            android:text="@string/login_register"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
 
 </LinearLayout>

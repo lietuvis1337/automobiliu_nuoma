@@ -14,4 +14,11 @@ public class Validation {
         Matcher matcher = pattern.matcher (credentials);
         return matcher.matches();
     }
+    public static boolean isValidEmail(String credentials) {
+        final String CREDENTIALS_PATTERN = "^\\D.+@.+\\.[a-z]+";
+        Pattern pattern = Pattern.compile(CREDENTIALS_PATTERN);
+
+        Matcher matcher = pattern.matcher (credentials);
+        return matcher.matches();
+    }
 }
