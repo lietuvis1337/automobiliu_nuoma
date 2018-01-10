@@ -45,30 +45,30 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/register_email"
-        android:hint="@string/register_email"
-        android:layout_width="match_parent"
-        android:fontFamily="sans-serif"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="10dp"
-        android:background="@color/colorEdit"
-        android:textColorHint="@color/colorHint"
-        android:textColor="@color/colorWhite"
-        android:padding="10dp"
-        android:layout_height="wrap_content" />
-
-    <EditText
         android:id="@+id/register_password"
         android:hint="@string/login_password"
         android:layout_width="match_parent"
         android:fontFamily="sans-serif"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/colorEdit"
         android:textColorHint="@color/colorHint"
         android:textColor="@color/colorWhite"
         android:padding="10dp"
         android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/register_email"
+        android:hint="@string/register_email"
+        android:layout_width="match_parent"
+        android:fontFamily="sans-serif"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorEdit"
+        android:textColorHint="@color/colorHint"
+        android:textColor="@color/colorWhite"
+        android:padding="10dp"
+        android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/register_submit"
