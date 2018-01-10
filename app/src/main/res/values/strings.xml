@@ -13,6 +13,6 @@
     <string name="register_username_error">Blogai įvestas prisijungimo vardas!</string>
     <string name="register_email_error">Blogai įvestas el. pašto adresas!</string>
     <string name="register_password_error">Blogai įvestas slaptažodis!</string>
-    <string name="search_name">Nuomos istorija</string>
+    <string name="search_description">Jūs sėkmingai prisijungėte prie sistemos.</string>
     <string name="search_submit">Ieškoti</string>
 </resources>

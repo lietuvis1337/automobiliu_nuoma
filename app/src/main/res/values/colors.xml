@@ -6,4 +6,8 @@
     <color name="colorGreen">#1ba727</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorBG">#2e3237</color>
+    <color name="colorEdit">#3b4148</color>
+    <color name="colorHint">#54595e</color>
+    <color name="colorButton">#c33f71</color>
 </resources>

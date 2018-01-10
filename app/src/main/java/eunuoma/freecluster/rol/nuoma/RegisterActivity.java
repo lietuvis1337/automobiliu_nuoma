@@ -30,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
                         if (Validation.isValid(registerPassword.getText().toString())) {
                             Intent pereitiKitur = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(pereitiKitur);
-                            Toast.makeText(LoginActivity.class, getResources().getString(R.string.register_successful), Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this, getResources().getString(R.string.register_successful), Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(RegisterActivity.this, getResources().getString(R.string.register_password_error), Toast.LENGTH_SHORT).show();
                         }
