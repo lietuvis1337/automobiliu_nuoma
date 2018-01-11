@@ -42,7 +42,6 @@ public class RegisterActivity extends AppCompatActivity {
                             registerUser(registerUsername.getText().toString(), registerPassword.getText().toString(), registerEmail.getText().toString());
                             Intent pereitiKitur = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(pereitiKitur);
-                            // Toast.makeText(RegisterActivity.this, getResources().getString(R.string.register_successful), Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(RegisterActivity.this, getResources().getString(R.string.register_password_error), Toast.LENGTH_SHORT).show();
                         }

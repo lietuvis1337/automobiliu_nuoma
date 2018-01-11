@@ -5,6 +5,7 @@
     <string name="login_password">Slaptažodis</string>
     <string name="login_login">Prisijungti</string>
     <string name="login_register">Registruotis</string>
+    <string name="login_remember_me">Prisiminti mane</string>
     <string name="login_error">Blogai įvestas prisijungimo vardas arba slaptažodis</string>
     <string name="register_notice">Norėdami užsiregistruoti mūsų sistemoje, užpildykite žemiau pateiktus langelius ir spauskite „Registruotis“.</string>
     <string name="register_email">El. paštas</string>
