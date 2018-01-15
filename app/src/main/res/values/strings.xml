@@ -16,4 +16,11 @@
     <string name="register_password_error">Blogai įvestas slaptažodis!</string>
     <string name="search_description">Jūs sėkmingai prisijungėte prie sistemos.</string>
     <string name="search_submit">Ieškoti</string>
+    <string name="search_naujas_langas">Pereiti į kitą langą</string>
+    <string name="add_entry_description">Norėdami įtraukti duomenis į duomenų bazę, užpildykite formą ir spauskite mygtuką „Pridėti įrašą“.</string>
+    <string name="add_entry_vardas">Vardas</string>
+    <string name="add_entry_pavarde">Pavardė</string>
+    <string name="add_entry_asmenskodas">Asmens kodas</string>
+    <string name="add_entry_submit">Pridėti įrašą</string>
+    <string name="add_entry_error">Užpildykite visus laukelius!</string>
 </resources>
