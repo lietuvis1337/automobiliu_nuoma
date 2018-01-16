@@ -6,8 +6,14 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -31,6 +37,21 @@ public class AddEntryActivity extends AppCompatActivity {
         final EditText entry_Pavarde = (EditText) findViewById(R.id.entry_pavarde);
         final EditText entry_AsmensKodas = (EditText) findViewById(R.id.entry_asmenskodas);
 
+        final CheckBox paslauga1 = (CheckBox) findViewById(R.id.paslauga1);
+        final CheckBox paslauga2 = (CheckBox) findViewById(R.id.paslauga2);
+        final CheckBox paslauga3 = (CheckBox) findViewById(R.id.paslauga3);
+
+        final RadioGroup automobiliai = (RadioGroup) findViewById(R.id.automobiliai);
+        final RadioButton[] automobilis = new RadioButton[1];
+
+        final Spinner tipas = (Spinner) findViewById(R.id.tipas);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(AddEntryActivity.this,
+                R.array.tipas, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        tipas.setAdapter(adapter);
+
         submit_kintamasis.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
@@ -38,9 +59,26 @@ public class AddEntryActivity extends AppCompatActivity {
                 if (Validation.isValid(entry_Vardas.getText().toString())) {
                     if (Validation.isValid(entry_Pavarde.getText().toString())) {
                         if (Validation.isValid(entry_AsmensKodas.getText().toString())) {
+
+                            int selectedId = automobiliai.getCheckedRadioButtonId();
+                            automobilis[0] = (RadioButton) findViewById(selectedId);
+
+                            StringBuffer paslaugos = new StringBuffer();
+                            if (paslauga1.isChecked()) {
+                                paslaugos.append("PILNAS BAKAS KURO").append(", ");
+                            }
+                            if (paslauga2.isChecked()) {
+                                paslaugos.append("ŠVARUS AUTOMOBILIS").append(", ");
+                            }
+                            if (paslauga3.isChecked()) {
+                                paslaugos.append("AUTOMOBILINIS ŠALDYTUVAS").append(", ");
+                            }
+
+                            Toast.makeText(AddEntryActivity.this, paslaugos + "\n" + automobilis[0].getText().toString() + "\n" + tipas.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
                             addEntry(entry_Vardas.getText().toString(), entry_Pavarde.getText().toString(), entry_AsmensKodas.getText().toString());
                             Intent pereitiKitur = new Intent(AddEntryActivity.this, SearchActivity.class);
                             startActivity(pereitiKitur);
+
                         } else {
                             Toast.makeText(AddEntryActivity.this, getResources().getString(R.string.add_entry_error), Toast.LENGTH_SHORT).show();
                         }

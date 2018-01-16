@@ -23,4 +23,11 @@
     <string name="add_entry_asmenskodas">Asmens kodas</string>
     <string name="add_entry_submit">Pridėti įrašą</string>
     <string name="add_entry_error">Užpildykite visus laukelius!</string>
+
+    <string-array name="tipas">
+        <item>Hečbekas</item>
+        <item>Sedanas</item>
+        <item>Universalas</item>
+    </string-array>
+
 </resources>

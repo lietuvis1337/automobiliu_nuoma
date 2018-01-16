@@ -4,72 +4,172 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBG"
-    android:padding="20dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="20dp">
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add_entry_description"
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        android:paddingBottom="20dp" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/entry_vardas"
-        android:hint="@string/add_entry_vardas"
-        android:layout_width="match_parent"
-        android:fontFamily="sans-serif"
-        android:layout_marginBottom="10dp"
-        android:background="@color/colorEdit"
-        android:textColorHint="@color/colorHint"
-        android:textColor="@color/colorWhite"
-        android:padding="10dp"
-        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/entry_pavarde"
-        android:hint="@string/add_entry_pavarde"
-        android:layout_width="match_parent"
-        android:fontFamily="sans-serif"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:background="@color/colorEdit"
-        android:textColorHint="@color/colorHint"
-        android:textColor="@color/colorWhite"
-        android:padding="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:text="@string/add_entry_description"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite" />
 
-    <EditText
-        android:id="@+id/entry_asmenskodas"
-        android:hint="@string/add_entry_asmenskodas"
-        android:layout_width="match_parent"
-        android:fontFamily="sans-serif"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="@color/colorEdit"
-        android:textColorHint="@color/colorHint"
-        android:textColor="@color/colorWhite"
-        android:padding="10dp" />
+            <EditText
+                android:id="@+id/entry_vardas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorEdit"
+                android:fontFamily="sans-serif"
+                android:hint="@string/add_entry_vardas"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorHint" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="100"
-        android:gravity="center"
-        android:orientation="horizontal">
+            <EditText
+                android:id="@+id/entry_pavarde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorEdit"
+                android:fontFamily="sans-serif"
+                android:hint="@string/add_entry_pavarde"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorHint" />
 
-        <Button
-            android:id="@+id/entry_submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:text="@string/add_entry_submit"
-            android:layout_marginRight="5dp"
-            android:background="@color/colorButton"
-            android:textColor="@color/colorWhite" />
+            <EditText
+                android:id="@+id/entry_asmenskodas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorEdit"
+                android:fontFamily="sans-serif"
+                android:hint="@string/add_entry_asmenskodas"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorHint" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:text="PASIRINKITE AUTOMOBILĮ:"
+                android:textColor="@color/colorWhite" />
+
+            <RadioGroup
+                android:id="@+id/automobiliai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/automobilis1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VW GOLF"
+                    android:checked="true"
+                    android:textColor="@color/colorWhite" />
+
+                <RadioButton
+                    android:id="@+id/automobilis2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PORSCHE CAYMAN"
+                    android:textColor="@color/colorWhite" />
+
+                <RadioButton
+                    android:id="@+id/automobilis3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="AUDI A6"
+                    android:textColor="@color/colorWhite" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:text="AUTOMOBILIO TIPAS:"
+                android:textColor="@color/colorWhite" />
+
+            <Spinner
+                android:id="@+id/tipas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorEdit"
+                android:drawSelectorOnTop="true"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:entries="@array/tipas" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:text="PAPILDOMOS PASLAUGOS:"
+                android:textColor="@color/colorWhite" />
+
+            <CheckBox
+                android:id="@+id/paslauga1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PILNAS BAKAS KURO"
+                android:textColor="@color/colorWhite" />
+
+            <CheckBox
+                android:id="@+id/paslauga2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ŠVARUS AUTOMOBILIS"
+                android:textColor="@color/colorWhite" />
+
+            <CheckBox
+                android:id="@+id/paslauga3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="AUTOMOBILINIS ŠALDYTUVAS"
+                android:textColor="@color/colorWhite" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <Button
+                    android:id="@+id/entry_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="50"
+                    android:background="@color/colorButton"
+                    android:text="@string/add_entry_submit"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
