@@ -74,7 +74,7 @@ public class AddEntryActivity extends AppCompatActivity {
                                 paslaugos.append("AUTOMOBILINIS ŠALDYTUVAS").append(", ");
                             }
 
-                            Toast.makeText(AddEntryActivity.this, paslaugos + "\n" + automobilis[0].getText().toString() + "\n" + tipas.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddEntryActivity.this,automobilis[0].getText().toString() + "\n" + tipas.getSelectedItem().toString() + "\n" + paslaugos, Toast.LENGTH_SHORT).show();
                             addEntry(entry_Vardas.getText().toString(), entry_Pavarde.getText().toString(), entry_AsmensKodas.getText().toString());
                             Intent pereitiKitur = new Intent(AddEntryActivity.this, SearchActivity.class);
                             startActivity(pereitiKitur);
