@@ -10,4 +10,5 @@
     <color name="colorEdit">#3b4148</color>
     <color name="colorHint">#54595e</color>
     <color name="colorButton">#c33f71</color>
+    <color name="colorYellow">#fff980</color>
 </resources>

@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBG"
-    android:padding="20dp"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/textView"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/vartotojasList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/search_description"
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        android:paddingBottom="20dp" />
-
-    <Button
-        android:id="@+id/ieskoti"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/colorButton"
-        android:layout_marginBottom="10dp"
-        android:text="@string/search_submit"
-        android:textColor="@color/colorWhite" />
-
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:layout_weight="1"
+        />
     <Button
         android:id="@+id/pereiti"
         android:layout_width="match_parent"
@@ -34,5 +19,4 @@
         android:background="@color/colorButton"
         android:text="@string/search_naujas_langas"
         android:textColor="@color/colorWhite" />
-
 </LinearLayout>
