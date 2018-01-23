@@ -65,17 +65,16 @@ public class AddEntryActivity extends AppCompatActivity {
 
                             StringBuffer paslaugos = new StringBuffer();
                             if (paslauga1.isChecked()) {
-                                paslaugos.append("PILNAS BAKAS KURO").append(", ");
+                                paslaugos.append("pilnas bakas kuro").append(", ");
                             }
                             if (paslauga2.isChecked()) {
-                                paslaugos.append("ŠVARUS AUTOMOBILIS").append(", ");
+                                paslaugos.append("švarus automobilis").append(", ");
                             }
                             if (paslauga3.isChecked()) {
-                                paslaugos.append("AUTOMOBILINIS ŠALDYTUVAS").append(", ");
+                                paslaugos.append("automobilinis šaldytuvas").append(", ");
                             }
-
-                            Toast.makeText(AddEntryActivity.this,automobilis[0].getText().toString() + "\n" + tipas.getSelectedItem().toString() + "\n" + paslaugos, Toast.LENGTH_SHORT).show();
-                            addEntry(entry_Vardas.getText().toString(), entry_Pavarde.getText().toString(), entry_AsmensKodas.getText().toString());
+                            User user = new User(AddEntryActivity.this);
+                            addEntry(entry_Vardas.getText().toString(), entry_Pavarde.getText().toString(), entry_AsmensKodas.getText().toString(), automobilis[0].getText().toString(), tipas.getSelectedItem().toString(), paslaugos.toString(), user.getUsernameForLogin());
                             Intent pereitiKitur = new Intent(AddEntryActivity.this, SearchActivity.class);
                             startActivity(pereitiKitur);
 
@@ -92,8 +91,8 @@ public class AddEntryActivity extends AppCompatActivity {
         });
     }
 
-    private void addEntry(String vardas, String pavarde, String asmenskodas) {
-        String urlSuffix = "?vardas="+vardas+"&pavarde="+pavarde+"&asmenskodas="+asmenskodas;
+    private void addEntry(String vardas, String pavarde, String asmenskodas, String automobilis, String tipas, String paslaugos, String vartotojas) {
+        String urlSuffix = "?vardas="+vardas+"&pavarde="+pavarde+"&asmenskodas="+asmenskodas+"&automobilis="+automobilis+"&tipas="+tipas+"&paslaugos="+paslaugos+"&vartotojas="+vartotojas;
         class addEntry extends AsyncTask<String, Void, String> {
 
             ProgressDialog loading;

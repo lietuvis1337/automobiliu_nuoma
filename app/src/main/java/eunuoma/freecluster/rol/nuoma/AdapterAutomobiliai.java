@@ -41,8 +41,11 @@ public class AdapterAutomobiliai extends RecyclerView.Adapter<RecyclerView.ViewH
         MyHolder myHolder= (MyHolder) holder;
         Automobiliai current=data.get(position);
         myHolder.textVardasPavarde.setText(current.getVardas() + " " + current.getPavarde());
-        myHolder.textAsmensKodas.setText("Asmens kodas: " + current.getAsmenskodas());
-        myHolder.textVartotojas.setText("Vartotojas: " + current.getVartotojas());
+        myHolder.textAsmensKodas.setText(current.getAsmenskodas());
+        myHolder.textAutomobilis.setText(current.getAutomobilis());
+        myHolder.textTipas.setText(current.getTipas());
+        myHolder.textPaslaugos.setText("Papildomai: " + current.getPaslaugos());
+        myHolder.textData.setText(current.getData());
         myHolder.textID.setText("ID: " + current.getId());
     }
 
@@ -57,7 +60,10 @@ public class AdapterAutomobiliai extends RecyclerView.Adapter<RecyclerView.ViewH
 
         TextView textVardasPavarde;
         TextView textAsmensKodas;
-        TextView textVartotojas;
+        TextView textAutomobilis;
+        TextView textTipas;
+        TextView textPaslaugos;
+        TextView textData;
         TextView textID;
 
         // create constructor to get widget reference
@@ -65,7 +71,10 @@ public class AdapterAutomobiliai extends RecyclerView.Adapter<RecyclerView.ViewH
             super(itemView);
             textVardasPavarde = (TextView) itemView.findViewById(R.id.textVardasPavarde);
             textAsmensKodas = (TextView) itemView.findViewById(R.id.textAsmensKodas);
-            textVartotojas = (TextView) itemView.findViewById(R.id.textVartotojas);
+            textAutomobilis = (TextView) itemView.findViewById(R.id.textAutomobilis);
+            textTipas = (TextView) itemView.findViewById(R.id.textTipas);
+            textPaslaugos = (TextView) itemView.findViewById(R.id.textPapildomai);
+            textData = (TextView) itemView.findViewById(R.id.textData);
             textID = (TextView) itemView.findViewById(R.id.textID);
             itemView.setOnClickListener(this);
         }

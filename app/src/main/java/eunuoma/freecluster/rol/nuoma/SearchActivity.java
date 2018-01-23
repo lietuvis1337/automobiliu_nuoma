@@ -247,7 +247,10 @@ public class SearchActivity extends AppCompatActivity {
                                 json_data.getString("vartotojas"),
                                 json_data.getString("vardas"),
                                 json_data.getString("pavarde"),
-                                json_data.getString("asmenskodas")
+                                json_data.getString("asmenskodas"),
+                                json_data.getString("automobilis"),
+                                json_data.getString("tipas"),
+                                json_data.getString("paslaugos")
                         );
                         data.add(automobilis);
                     }
